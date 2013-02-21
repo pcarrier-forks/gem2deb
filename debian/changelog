@@ -1,3 +1,11 @@
+gem2deb (0.2.7~bpo60+1) squeeze-backports; urgency=low
+
+  * Remove ruby-shoulda and add compatibility ruby library names
+  * Disable tests due missing ruby-shoulda
+  * Add myself to Uploaders for bpo upload
+
+ -- Ondřej Surý <ondrej@debian.org>  Wed, 24 Aug 2011 11:36:57 +0200
+
 gem2deb (0.2.7) unstable; urgency=low
 
   * Fix .so/.rb name clash resolution for the case of multiple binary
