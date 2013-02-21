@@ -134,7 +134,7 @@ module Gem2Deb
       if metadata.has_native_extensions?
         supported_versions.each do |rubyver|
           puts "Building extension for #{rubyver} ..." if @verbose
-          run("#{SUPPORTED_RUBY_VERSIONS[rubyver]} -I#{LIBDIR} #{EXTENSION_BUILDER} #{package}")
+          run("#{SUPPORTED_RUBY_VERSIONS[rubyver]} -I#{LIBDIR} #{EXTENSION_BUILDER} #{package} #{destdir_for(package)}")
 
           # Remove duplicate files installed by rubygems in the arch dir
           # This is a hack to workaround a problem in rubygems
